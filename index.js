@@ -1,3 +1,3 @@
-import greeting from './src/cli.js';
+import username from './src/cli.js';
 
-export default greeting;
+export default username;
