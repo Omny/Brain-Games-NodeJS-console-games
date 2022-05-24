@@ -1,3 +1,3 @@
-import username from './src/cli.js';
+import askUserName from './src/cli.js';
 
-export default username;
+export default askUserName;
