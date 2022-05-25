@@ -1,3 +1,4 @@
 import askUserName from './src/cli.js';
+import askEven from './src/ask-even.js';
 
-export default askUserName;
+export { askUserName, askEven };
