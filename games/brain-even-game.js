@@ -52,6 +52,4 @@ const playGame = () => {
   congratulationsUser(userName);
 };
 
-export {
-  getWhatToAsk, getRightAnswer, playGame,
-};
+export default playGame;
