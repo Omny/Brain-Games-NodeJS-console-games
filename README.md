@@ -7,6 +7,5 @@
 
 How to install and play
 
+brain-even
 https://asciinema.org/a/jpZRrdr7t3QfZJurRpHX5PafD
-
-[![asciicast](https://asciinema.org/a/jpZRrdr7t3QfZJurRpHX5PafD.svg)](https://asciinema.org/a/jpZRrdr7t3QfZJurRpHX5PafD)
