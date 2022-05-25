@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { askQuestion, getRandomInt } from '../index.js';
+import { askQuestion, getRandomInt, isAnswerRight } from '../index.js';
 
 console.log('Welcome to the Brain Games!');
 const userName = askQuestion('May I have your name? ');
@@ -12,16 +12,14 @@ while (rightAnswers < 3) {
   const numberToAsk = getRandomInt(maxNumber);
   // Ask question
   console.log(`Question: ${numberToAsk}`);
-  const isNumberEven = numberToAsk % 2 === 0 ? 'yes' : 'no';
+  const askedNumberEven = numberToAsk % 2 === 0 ? 'yes' : 'no';
   // Get answer
   const enteredEven = askQuestion('Your answer: ');
   // Check answer
-  if (isNumberEven === enteredEven) {
+  if (isAnswerRight(askedNumberEven, enteredEven, userName)) {
     rightAnswers += 1;
-    console.log('Correct!');
   } else {
-    console.log(`${enteredEven} is wrong answer ;(. Correct answer was ${isNumberEven}.`);
-    console.log(`Let's try again, ${userName}!`);
+    rightAnswers = 0;
   }
 }
 // End game
