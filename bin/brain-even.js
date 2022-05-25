@@ -10,7 +10,7 @@ const userName = askUserName();
 console.log(`Hello, ${userName}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 let rightAnswers = 0;
-while (rightAnswers <= 3) {
+while (rightAnswers < 3) {
   const numberToAsk = getRandomInt(100);
   console.log(`Question: ${numberToAsk}`);
   const isNumberEven = numberToAsk % 2 === 0 ? 'yes' : 'no';
