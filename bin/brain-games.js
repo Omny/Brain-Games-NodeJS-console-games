@@ -2,4 +2,5 @@
 import askUserName from '../index.js';
 
 console.log('Welcome to the Brain Games!');
-const name = askUserName();
+const userName = askUserName();
+console.log(`Hello, ${userName}!`);
