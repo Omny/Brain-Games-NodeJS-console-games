@@ -1,9 +1,5 @@
 #!/usr/bin/env node
-import { askUserName, askEven } from '../index.js';
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
+import { askUserName, askEven, getRandomInt } from '../index.js';
 
 console.log('Welcome to the Brain Games!');
 const userName = askUserName();
