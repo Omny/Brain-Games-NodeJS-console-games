@@ -6,15 +6,14 @@ import {
   printGameDescription,
   printAskedQuestion,
   getUsersAnswer,
-  getResult,
-  printResult,
+  isRightAnswer,
   congratulationsUser,
 } from '../src/index.js';
 
 // How to play
 const gameDescription = 'What is the result of the expression?';
 
-const whatToAsk = () => {
+const askQuestionAndGetAnswer = () => {
   const maxNumber = 100;
   const firstNumber = getRandomInt(maxNumber);
   const secondNumber = getRandomInt(maxNumber);
@@ -38,21 +37,6 @@ const whatToAsk = () => {
   return resultNumber;
 };
 
-// Check right answer
-const isRightAnswer = (userName) => {
-  // Ask question
-  const askedQuestion = whatToAsk();
-  // Get entered answer
-  const usersAnswer = getUsersAnswer();
-  // Get right Answer
-  const rightAnswer = askedQuestion;
-  // Check answer
-  const result = getResult(usersAnswer, rightAnswer);
-  printResult(result, usersAnswer, rightAnswer, userName);
-
-  return result;
-};
-
 // Start game
 const brainCalcGame = () => {
   welcome();
@@ -64,7 +48,12 @@ const brainCalcGame = () => {
   let rightAnswers = 0;
   const maxRounds = 3;
   do {
-    const result = isRightAnswer(userName);
+    // Ask question and get right answer
+    const rightAnswer = askQuestionAndGetAnswer();
+    // Get entered answer
+    const usersAnswer = getUsersAnswer();
+    // Check is right answer
+    const result = isRightAnswer(usersAnswer, rightAnswer, userName);
     if (result) {
       rightAnswers += 1;
     } else {

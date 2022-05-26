@@ -7,37 +7,22 @@ import {
   printGameDescription,
   printAskedQuestion,
   getUsersAnswer,
-  getResult,
-  printResult,
+  isRightAnswer,
   congratulationsUser,
 } from '../src/index.js';
 
 // How to play
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-const whatToAsk = () => {
-  const maxNumber = 10;
-  const firstNumber = getRandomInt(maxNumber);
-  const secondNumber = getRandomInt(maxNumber);
+const askQuestionAndGetAnswer = () => {
+  const maxNumber = 9;
+  // 0 is not allowed, add 1 to each number
+  const firstNumber = getRandomInt(maxNumber) + 1;
+  const secondNumber = getRandomInt(maxNumber) + 1;
   const questionStr = `${firstNumber} ${secondNumber}`;
   printAskedQuestion(questionStr);
   const resultNumber = getGcd(firstNumber, secondNumber);
   return resultNumber;
-};
-
-// Check right answer
-const isRightAnswer = (userName) => {
-  // Ask question
-  const askedQuestion = whatToAsk();
-  // Get entered answer
-  const usersAnswer = getUsersAnswer();
-  // Get right Answer
-  const rightAnswer = askedQuestion;
-  // Check answer
-  const result = getResult(usersAnswer, rightAnswer);
-  printResult(result, usersAnswer, rightAnswer, userName);
-
-  return result;
 };
 
 // Start game
@@ -51,7 +36,12 @@ const brainGcdGame = () => {
   let rightAnswers = 0;
   const maxRounds = 3;
   do {
-    const result = isRightAnswer(userName);
+    // Ask question and get right answer
+    const rightAnswer = askQuestionAndGetAnswer();
+    // Get entered answer
+    const usersAnswer = getUsersAnswer();
+    // Check is right answer
+    const result = isRightAnswer(usersAnswer, rightAnswer, userName);
     if (result) {
       rightAnswers += 1;
     } else {

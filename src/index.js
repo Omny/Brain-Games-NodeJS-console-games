@@ -30,8 +30,6 @@ const getUsersAnswer = () => {
   return usersAnswer;
 };
 
-const getResult = (usersAnswer, rightAnswer) => String(usersAnswer) === String(rightAnswer);
-
 const printResult = (result, usersAnswer, rightAnswer, userName) => {
   if (result) {
     console.log('Correct!');
@@ -41,6 +39,14 @@ const printResult = (result, usersAnswer, rightAnswer, userName) => {
     );
     console.log(`Let's try again, ${userName}!`);
   }
+};
+
+// Check is right answer
+const isRightAnswer = (usersAnswer, rightAnswer, userName) => {
+  const result = String(usersAnswer) === String(rightAnswer);
+  printResult(result, usersAnswer, rightAnswer, userName);
+
+  return result;
 };
 
 const congratulationsUser = (userName) => {
@@ -57,7 +63,7 @@ export {
   printGameDescription,
   printAskedQuestion,
   getUsersAnswer,
-  getResult,
+  isRightAnswer,
   printResult,
   congratulationsUser,
 };
