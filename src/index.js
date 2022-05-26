@@ -6,11 +6,7 @@ const welcome = () => {
   console.log('Welcome to the Brain Games!');
 };
 
-const getUserName = () => {
-  const userName = getAnswer('May I have your name? ');
-
-  return userName;
-};
+const getUserName = () => getAnswer('May I have your name? ');
 
 const greatingsUser = (userName) => {
   console.log(`Hello, ${userName}!`);
@@ -24,11 +20,7 @@ const printAskedQuestion = (askedQuestion) => {
   console.log(`Question: ${askedQuestion}`);
 };
 
-const getUsersAnswer = () => {
-  const usersAnswer = getAnswer('Your answer: ');
-
-  return usersAnswer;
-};
+const getUsersAnswer = () => getAnswer('Your answer: ');
 
 const printResult = (result, usersAnswer, rightAnswer, userName) => {
   if (result) {
