@@ -13,6 +13,7 @@ import {
 // How to play
 const gameDescription = 'What is the result of the expression?';
 
+// Game logic
 const askQuestionAndGetRightAnswer = () => {
   const maxNumber = 100;
   const firstNumber = getRandomInt(maxNumber);
@@ -44,15 +45,12 @@ const brainCalcGame = () => {
   greatingsUser(userName);
   printGameDescription(gameDescription);
 
-  // Play rounds
+  // Play rounds and check is answer right
   let rightAnswers = 0;
   const maxRounds = 3;
   do {
-    // Ask question and get right answer
     const rightAnswer = askQuestionAndGetRightAnswer();
-    // Get entered answer
     const usersAnswer = getUsersAnswer();
-    // Check is right answer
     const result = isAnswerRight(usersAnswer, rightAnswer, userName);
     if (result) {
       rightAnswers += 1;

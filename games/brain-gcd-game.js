@@ -14,6 +14,7 @@ import {
 // How to play
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
+// Game logic
 const askQuestionAndGetRightAnswer = () => {
   const maxNumber = 9;
   // 0 is not allowed, add 1 to each number
@@ -33,15 +34,12 @@ const brainGcdGame = () => {
   greatingsUser(userName);
   printGameDescription(gameDescription);
 
-  // Play rounds
+  // Play rounds and check is answer right
   let rightAnswers = 0;
   const maxRounds = 3;
   do {
-    // Ask question and get right answer
     const rightAnswer = askQuestionAndGetRightAnswer();
-    // Get entered answer
     const usersAnswer = getUsersAnswer();
-    // Check is right answer
     const result = isAnswerRight(usersAnswer, rightAnswer, userName);
     if (result) {
       rightAnswers += 1;
