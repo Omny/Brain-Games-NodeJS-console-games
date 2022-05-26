@@ -8,4 +8,7 @@
 How to install and play
 
 brain-even
-https://asciinema.org/a/jpZRrdr7t3QfZJurRpHX5PafD
+https://asciinema.org/a/kvOMmQeumSDjAYZRGC3gbm35Z
+
+brain-calc
+https://asciinema.org/a/sHWyCLEjr2iIY6Mz3ZZ6TH6Bj

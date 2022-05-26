@@ -12,14 +12,30 @@ import {
 } from '../src/index.js';
 
 // How to play
-const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameDescription = 'What is the result of the expression?';
 
 const whatToAsk = () => {
   const maxNumber = 100;
-  const numberToAsk = getRandomInt(maxNumber);
-  printAskedQuestion(numberToAsk);
+  const firstNumber = getRandomInt(maxNumber);
+  const secondNumber = getRandomInt(maxNumber);
+  const maxOperatorRandomNumber = 2;
+  const operatorNumber = getRandomInt(maxOperatorRandomNumber);
+  let arithmeticOperator = '';
+  let resultNumber = 0;
+  if (operatorNumber === 0) {
+    arithmeticOperator = '+';
+    resultNumber = firstNumber + secondNumber;
+  } else if (operatorNumber === 1) {
+    arithmeticOperator = '-';
+    resultNumber = firstNumber - secondNumber;
+  } else {
+    arithmeticOperator = '*';
+    resultNumber = firstNumber * secondNumber;
+  }
+  const arithmeticOperationStr = `${firstNumber} ${arithmeticOperator} ${secondNumber}`;
+  printAskedQuestion(arithmeticOperationStr);
 
-  return numberToAsk;
+  return resultNumber;
 };
 
 // Check right answer
@@ -29,7 +45,7 @@ const isRightAnswer = (userName) => {
   // Get entered answer
   const usersAnswer = getUsersAnswer();
   // Get right Answer
-  const rightAnswer = askedQuestion % 2 === 0 ? 'yes' : 'no';
+  const rightAnswer = askedQuestion;
   // Check answer
   const result = getResult(usersAnswer, rightAnswer);
   printResult(result, usersAnswer, rightAnswer, userName);
@@ -38,7 +54,7 @@ const isRightAnswer = (userName) => {
 };
 
 // Start game
-const brainEvenGame = () => {
+const brainCalcGame = () => {
   welcome();
   const userName = getUserName();
   greatingsUser(userName);
@@ -61,4 +77,4 @@ const brainEvenGame = () => {
   }
 };
 
-export default brainEvenGame;
+export default brainCalcGame;

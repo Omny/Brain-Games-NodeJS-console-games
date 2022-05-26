@@ -1,4 +1,5 @@
-import { getAnswer } from '../index.js';
+import getAnswer from './get-answer.js';
+import getRandomInt from './get-random-int.js';
 
 const welcome = () => {
   console.log('Welcome to the Brain Games!');
@@ -6,6 +7,7 @@ const welcome = () => {
 
 const getUserName = () => {
   const userName = getAnswer('May I have your name? ');
+
   return userName;
 };
 
@@ -23,17 +25,21 @@ const printAskedQuestion = (askedQuestion) => {
 
 const getUsersAnswer = () => {
   const usersAnswer = getAnswer('Your answer: ');
+
   return usersAnswer;
 };
 
-const getResult = (usersAnswer, rightAnswer, userName) => {
-  if (usersAnswer === rightAnswer) {
+const getResult = (usersAnswer, rightAnswer) => String(usersAnswer) === String(rightAnswer);
+
+const printResult = (result, usersAnswer, rightAnswer, userName) => {
+  if (result) {
     console.log('Correct!');
   } else {
-    console.log(`${usersAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.`);
+    console.log(
+      `${usersAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.`,
+    );
     console.log(`Let's try again, ${userName}!`);
   }
-  return usersAnswer === rightAnswer;
 };
 
 const congratulationsUser = (userName) => {
@@ -41,6 +47,8 @@ const congratulationsUser = (userName) => {
 };
 
 export {
+  getAnswer,
+  getRandomInt,
   welcome,
   getUserName,
   greatingsUser,
@@ -48,5 +56,6 @@ export {
   printAskedQuestion,
   getUsersAnswer,
   getResult,
+  printResult,
   congratulationsUser,
 };
