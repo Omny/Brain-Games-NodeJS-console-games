@@ -22,6 +22,7 @@ const askQuestionAndGetAnswer = () => {
   const questionStr = `${firstNumber} ${secondNumber}`;
   printAskedQuestion(questionStr);
   const resultNumber = getGcd(firstNumber, secondNumber);
+
   return resultNumber;
 };
 
