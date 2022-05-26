@@ -5,8 +5,10 @@
 
 ### Brain Games is a NodeJS console game
 
-How to install and play
+How to install and play:
+
 make install
+
 npm link
 
 brain-even
