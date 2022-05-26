@@ -1,5 +1,6 @@
 import getAnswer from './get-answer.js';
 import getRandomInt from './get-random-int.js';
+import getGcd from './get-gcd.js';
 
 const welcome = () => {
   console.log('Welcome to the Brain Games!');
@@ -49,6 +50,7 @@ const congratulationsUser = (userName) => {
 export {
   getAnswer,
   getRandomInt,
+  getGcd,
   welcome,
   getUserName,
   greatingsUser,
