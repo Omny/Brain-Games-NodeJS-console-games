@@ -11,6 +11,8 @@ make install
 
 npm link
 
+Demo:
+
 brain-even
 https://asciinema.org/a/kvOMmQeumSDjAYZRGC3gbm35Z
 
