@@ -42,7 +42,7 @@ const printResult = (result, usersAnswer, rightAnswer, userName) => {
 };
 
 // Check is right answer
-const isRightAnswer = (usersAnswer, rightAnswer, userName) => {
+const isAnswerRight = (usersAnswer, rightAnswer, userName) => {
   const result = String(usersAnswer) === String(rightAnswer);
   printResult(result, usersAnswer, rightAnswer, userName);
 
@@ -63,7 +63,7 @@ export {
   printGameDescription,
   printAskedQuestion,
   getUsersAnswer,
-  isRightAnswer,
+  isAnswerRight,
   printResult,
   congratulationsUser,
 };
