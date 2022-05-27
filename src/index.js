@@ -44,6 +44,7 @@ const playGame = (gameDescription, questions, answers) => {
 export {
   getRandomInt,
   getGcd,
+  getAnswer,
   getMaxRounds,
   playGame,
 };
