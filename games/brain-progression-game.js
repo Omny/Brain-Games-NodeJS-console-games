@@ -5,21 +5,21 @@ import {
 } from '../src/index.js';
 
 // How to play
-const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameDescription = 'What number is missing in the progression?';
 
 // Game logic
 const getQuestionAndAnswer = () => {
   const progressionLength = 10;
   const maxRandomFirstNumber = 15;
   const firstNumber = getRandomInt(maxRandomFirstNumber);
-  const maxRandomProgressionCoefficient = 5;
-  const progressionCoefficient = getRandomInt(maxRandomProgressionCoefficient);
+  const maxRandomCommonDifference = 5;
+  const commonDifference = getRandomInt(maxRandomCommonDifference);
   const numbers = [];
   for (let counter = 1; counter <= progressionLength; counter += 1) {
     if (counter === 1) {
       numbers[counter] = firstNumber;
     } else {
-      numbers[counter] = numbers[counter - 1] + progressionCoefficient;
+      numbers[counter] = numbers[counter - 1] + commonDifference;
     }
   }
   const answerPosition = getRandomInt(progressionLength);
