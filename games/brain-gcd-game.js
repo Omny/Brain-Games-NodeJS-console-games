@@ -1,56 +1,35 @@
 import {
   getRandomInt,
   getGcd,
-  printWelcome,
-  getUserName,
-  printGreatings,
-  printGameDescription,
-  printQuestion,
-  getUsersAnswer,
-  isAnswerRight,
-  printCongratulations,
+  getMaxRounds,
+  playGame,
 } from '../src/index.js';
 
 // How to play
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 // Game logic
-const askQuestionAndGetRightAnswer = () => {
-  const maxRandomNumber = 9;
-  // 0 is not allowed, add 1 to each number
-  const firstNumber = getRandomInt(maxRandomNumber) + 1;
-  const secondNumber = getRandomInt(maxRandomNumber) + 1;
-  const strToAsk = `${firstNumber} ${secondNumber}`;
-  printQuestion(strToAsk);
-  const resultNumber = getGcd(firstNumber, secondNumber);
+const getQuestionAndAnswer = () => {
+  const maxRandomNumber = 10;
+  const firstNumber = getRandomInt(maxRandomNumber);
+  const secondNumber = getRandomInt(maxRandomNumber);
+  const question = `${firstNumber} ${secondNumber}`;
+  const answer = getGcd(firstNumber, secondNumber);
 
-  return resultNumber;
+  return [question, answer];
 };
 
 // Start game
 const brainGcdGame = () => {
-  printWelcome();
-  const userName = getUserName();
-  printGreatings(userName);
-  printGameDescription(gameDescription);
-
-  // Play rounds and check is answer right
-  let round = 0;
-  const maxRounds = 3;
-  do {
-    const rightAnswer = askQuestionAndGetRightAnswer();
-    const usersAnswer = getUsersAnswer();
-    const result = isAnswerRight(usersAnswer, rightAnswer, userName);
-    if (result) {
-      round += 1;
-    } else {
-      break;
-    }
-  } while (round < maxRounds);
-
-  if (round === maxRounds) {
-    printCongratulations(userName);
+  const questions = [];
+  const answers = [];
+  const maxRounds = getMaxRounds();
+  for (let roundCounter = 1; roundCounter <= maxRounds; roundCounter += 1) {
+    const [question, answer] = getQuestionAndAnswer();
+    questions[roundCounter] = question;
+    answers[roundCounter] = answer;
   }
+  playGame(gameDescription, questions, answers);
 };
 
 export default brainGcdGame;

@@ -9,9 +9,23 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 
 // Game logic
 const getQuestionAndAnswer = () => {
-  const maxNumber = 100;
-  const question = getRandomInt(maxNumber);
-  const answer = question % 2 === 0 ? 'yes' : 'no';
+  const progressionLength = 10;
+  const maxRandomFirstNumber = 15;
+  const firstNumber = getRandomInt(maxRandomFirstNumber);
+  const maxRandomProgressionCoefficient = 5;
+  const progressionCoefficient = getRandomInt(maxRandomProgressionCoefficient);
+  const numbers = [];
+  for (let counter = 1; counter <= progressionLength; counter += 1) {
+    if (counter === 1) {
+      numbers[counter] = firstNumber;
+    } else {
+      numbers[counter] = numbers[counter - 1] + progressionCoefficient;
+    }
+  }
+  const answerPosition = getRandomInt(progressionLength);
+  const answer = numbers[answerPosition];
+  numbers[answerPosition] = '..';
+  const question = numbers.join(' ');
 
   return [question, answer];
 };
