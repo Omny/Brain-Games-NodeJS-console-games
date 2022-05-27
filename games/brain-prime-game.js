@@ -1,23 +1,21 @@
 import {
-  getRandomInt,
-  getMaxRounds,
-  playGame,
+  getRandomInt, isPrime, getMaxRounds, playGame,
 } from '../src/index.js';
 
 // How to play
-const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 // Game logic
 const getQuestionAndAnswer = () => {
   const maxNumber = 100;
   const question = getRandomInt(maxNumber);
-  const answer = question % 2 === 0 ? 'yes' : 'no';
+  const answer = isPrime(question) ? 'yes' : 'no';
 
   return [question, answer];
 };
 
 // Start game
-const brainEvenGame = () => {
+const brainPrimeGame = () => {
   const gameDataArray = [];
   const maxRounds = getMaxRounds();
   for (let roundCounter = 0; roundCounter < maxRounds; roundCounter += 1) {
@@ -27,4 +25,4 @@ const brainEvenGame = () => {
   playGame(gameDescription, gameDataArray);
 };
 
-export default brainEvenGame;
+export default brainPrimeGame;

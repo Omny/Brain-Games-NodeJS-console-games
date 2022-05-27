@@ -1,8 +1,5 @@
 import {
-  getRandomInt,
-  getGcd,
-  getMaxRounds,
-  playGame,
+  getRandomInt, getGcd, getMaxRounds, playGame,
 } from '../src/index.js';
 
 // How to play
@@ -21,15 +18,13 @@ const getQuestionAndAnswer = () => {
 
 // Start game
 const brainGcdGame = () => {
-  const questions = [];
-  const answers = [];
+  const gameDataArray = [];
   const maxRounds = getMaxRounds();
-  for (let roundCounter = 1; roundCounter <= maxRounds; roundCounter += 1) {
-    const [question, answer] = getQuestionAndAnswer();
-    questions[roundCounter] = question;
-    answers[roundCounter] = answer;
+  for (let roundCounter = 0; roundCounter < maxRounds; roundCounter += 1) {
+    const questionAndAnswer = getQuestionAndAnswer();
+    gameDataArray.push(questionAndAnswer);
   }
-  playGame(gameDescription, questions, answers);
+  playGame(gameDescription, gameDataArray);
 };
 
 export default brainGcdGame;

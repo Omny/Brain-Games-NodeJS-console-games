@@ -1,8 +1,4 @@
-import {
-  getRandomInt,
-  getMaxRounds,
-  playGame,
-} from '../src/index.js';
+import { getRandomInt, getMaxRounds, playGame } from '../src/index.js';
 
 // How to play
 const gameDescription = 'What number is missing in the progression?';
@@ -32,15 +28,13 @@ const getQuestionAndAnswer = () => {
 
 // Start game
 const brainEvenGame = () => {
-  const questions = [];
-  const answers = [];
+  const gameDataArray = [];
   const maxRounds = getMaxRounds();
-  for (let roundCounter = 1; roundCounter <= maxRounds; roundCounter += 1) {
-    const [question, answer] = getQuestionAndAnswer();
-    questions[roundCounter] = question;
-    answers[roundCounter] = answer;
+  for (let roundCounter = 0; roundCounter < maxRounds; roundCounter += 1) {
+    const questionAndAnswer = getQuestionAndAnswer();
+    gameDataArray.push(questionAndAnswer);
   }
-  playGame(gameDescription, questions, answers);
+  playGame(gameDescription, gameDataArray);
 };
 
 export default brainEvenGame;
