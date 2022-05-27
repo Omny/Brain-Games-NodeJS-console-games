@@ -2,13 +2,13 @@ import getAnswer from './get-answer.js';
 import getRandomInt from './get-random-int.js';
 import getGcd from './get-gcd.js';
 
-const welcome = () => {
+const printWelcome = () => {
   console.log('Welcome to the Brain Games!');
 };
 
 const getUserName = () => getAnswer('May I have your name? ');
 
-const greatingsUser = (userName) => {
+const printGreatings = (userName) => {
   console.log(`Hello, ${userName}!`);
 };
 
@@ -16,7 +16,7 @@ const printGameDescription = (gameDescription) => {
   console.log(gameDescription);
 };
 
-const printAskedQuestion = (askedQuestion) => {
+const printQuestion = (askedQuestion) => {
   console.log(`Question: ${askedQuestion}`);
 };
 
@@ -41,7 +41,7 @@ const isAnswerRight = (usersAnswer, rightAnswer, userName) => {
   return result;
 };
 
-const congratulationsUser = (userName) => {
+const printCongratulations = (userName) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
@@ -49,13 +49,13 @@ export {
   getAnswer,
   getRandomInt,
   getGcd,
-  welcome,
+  printWelcome,
   getUserName,
-  greatingsUser,
+  printGreatings,
   printGameDescription,
-  printAskedQuestion,
+  printQuestion,
   getUsersAnswer,
   isAnswerRight,
   printResult,
-  congratulationsUser,
+  printCongratulations,
 };

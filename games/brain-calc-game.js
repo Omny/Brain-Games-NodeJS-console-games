@@ -1,13 +1,13 @@
 import {
   getRandomInt,
-  welcome,
+  printWelcome,
   getUserName,
-  greatingsUser,
+  printGreatings,
   printGameDescription,
-  printAskedQuestion,
+  printQuestion,
   getUsersAnswer,
   isAnswerRight,
-  congratulationsUser,
+  printCongratulations,
 } from '../src/index.js';
 
 // How to play
@@ -15,9 +15,9 @@ const gameDescription = 'What is the result of the expression?';
 
 // Game logic
 const askQuestionAndGetRightAnswer = () => {
-  const maxNumber = 100;
-  const firstNumber = getRandomInt(maxNumber);
-  const secondNumber = getRandomInt(maxNumber);
+  const maxRandomNumber = 100;
+  const firstNumber = getRandomInt(maxRandomNumber);
+  const secondNumber = getRandomInt(maxRandomNumber);
   const maxOperatorRandomNumber = 2;
   const operatorNumber = getRandomInt(maxOperatorRandomNumber);
   let arithmeticOperator = '';
@@ -32,35 +32,35 @@ const askQuestionAndGetRightAnswer = () => {
     arithmeticOperator = '*';
     resultNumber = firstNumber * secondNumber;
   }
-  const arithmeticOperationStr = `${firstNumber} ${arithmeticOperator} ${secondNumber}`;
-  printAskedQuestion(arithmeticOperationStr);
+  const strToAsk = `${firstNumber} ${arithmeticOperator} ${secondNumber}`;
+  printQuestion(strToAsk);
 
   return resultNumber;
 };
 
 // Start game
 const brainCalcGame = () => {
-  welcome();
+  printWelcome();
   const userName = getUserName();
-  greatingsUser(userName);
+  printGreatings(userName);
   printGameDescription(gameDescription);
 
   // Play rounds and check is answer right
-  let rightAnswers = 0;
+  let round = 0;
   const maxRounds = 3;
   do {
     const rightAnswer = askQuestionAndGetRightAnswer();
     const usersAnswer = getUsersAnswer();
     const result = isAnswerRight(usersAnswer, rightAnswer, userName);
     if (result) {
-      rightAnswers += 1;
+      round += 1;
     } else {
       break;
     }
-  } while (rightAnswers < maxRounds);
+  } while (round < maxRounds);
 
-  if (rightAnswers === maxRounds) {
-    congratulationsUser(userName);
+  if (round === maxRounds) {
+    printCongratulations(userName);
   }
 };
 

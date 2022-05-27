@@ -1,13 +1,13 @@
 import {
   getRandomInt,
-  welcome,
+  printWelcome,
   getUserName,
-  greatingsUser,
+  printGreatings,
   printGameDescription,
-  printAskedQuestion,
+  printQuestion,
   getUsersAnswer,
   isAnswerRight,
-  congratulationsUser,
+  printCongratulations,
 } from '../src/index.js';
 
 // How to play
@@ -17,7 +17,7 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 const askQuestionAndGetRightAnswer = () => {
   const maxNumber = 100;
   const numberToAsk = getRandomInt(maxNumber);
-  printAskedQuestion(numberToAsk);
+  printQuestion(numberToAsk);
   const resultStr = numberToAsk % 2 === 0 ? 'yes' : 'no';
 
   return resultStr;
@@ -25,27 +25,27 @@ const askQuestionAndGetRightAnswer = () => {
 
 // Start game
 const brainEvenGame = () => {
-  welcome();
+  printWelcome();
   const userName = getUserName();
-  greatingsUser(userName);
+  printGreatings(userName);
   printGameDescription(gameDescription);
 
   // Play rounds and check is answer right
-  let rightAnswers = 0;
+  let round = 0;
   const maxRounds = 3;
   do {
     const rightAnswer = askQuestionAndGetRightAnswer();
     const usersAnswer = getUsersAnswer();
     const result = isAnswerRight(usersAnswer, rightAnswer, userName);
     if (result) {
-      rightAnswers += 1;
+      round += 1;
     } else {
       break;
     }
-  } while (rightAnswers < maxRounds);
+  } while (round < maxRounds);
 
-  if (rightAnswers === maxRounds) {
-    congratulationsUser(userName);
+  if (round === maxRounds) {
+    printCongratulations(userName);
   }
 };
 

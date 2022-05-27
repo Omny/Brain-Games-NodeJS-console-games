@@ -1,14 +1,14 @@
 import {
   getRandomInt,
   getGcd,
-  welcome,
+  printWelcome,
   getUserName,
-  greatingsUser,
+  printGreatings,
   printGameDescription,
-  printAskedQuestion,
+  printQuestion,
   getUsersAnswer,
   isAnswerRight,
-  congratulationsUser,
+  printCongratulations,
 } from '../src/index.js';
 
 // How to play
@@ -16,12 +16,12 @@ const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 // Game logic
 const askQuestionAndGetRightAnswer = () => {
-  const maxNumber = 9;
+  const maxRandomNumber = 9;
   // 0 is not allowed, add 1 to each number
-  const firstNumber = getRandomInt(maxNumber) + 1;
-  const secondNumber = getRandomInt(maxNumber) + 1;
-  const questionStr = `${firstNumber} ${secondNumber}`;
-  printAskedQuestion(questionStr);
+  const firstNumber = getRandomInt(maxRandomNumber) + 1;
+  const secondNumber = getRandomInt(maxRandomNumber) + 1;
+  const strToAsk = `${firstNumber} ${secondNumber}`;
+  printQuestion(strToAsk);
   const resultNumber = getGcd(firstNumber, secondNumber);
 
   return resultNumber;
@@ -29,27 +29,27 @@ const askQuestionAndGetRightAnswer = () => {
 
 // Start game
 const brainGcdGame = () => {
-  welcome();
+  printWelcome();
   const userName = getUserName();
-  greatingsUser(userName);
+  printGreatings(userName);
   printGameDescription(gameDescription);
 
   // Play rounds and check is answer right
-  let rightAnswers = 0;
+  let round = 0;
   const maxRounds = 3;
   do {
     const rightAnswer = askQuestionAndGetRightAnswer();
     const usersAnswer = getUsersAnswer();
     const result = isAnswerRight(usersAnswer, rightAnswer, userName);
     if (result) {
-      rightAnswers += 1;
+      round += 1;
     } else {
       break;
     }
-  } while (rightAnswers < maxRounds);
+  } while (round < maxRounds);
 
-  if (rightAnswers === maxRounds) {
-    congratulationsUser(userName);
+  if (round === maxRounds) {
+    printCongratulations(userName);
   }
 };
 
