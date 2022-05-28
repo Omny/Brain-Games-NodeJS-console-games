@@ -3,7 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 ![Node CI](https://github.com/Omny/frontend-project-lvl1/actions/workflows/github-actions.yml/badge.svg)
 
-### Brain Games - a NodeJS console games
+# Brain Games - a NodeJS console games
 
 Brain Games - a set of five console games for practicing mental counting, which improves brain functionality. Each game asks questions that need to be answered correctly. After three correct answers, you win. Wrong answers end the game and you are asked to play it again.
 
@@ -13,31 +13,31 @@ make install
 
 npm link
 
-# brain-even
+### brain-even
 
 Asks is a number even.
 
 https://asciinema.org/a/kvOMmQeumSDjAYZRGC3gbm35Z
 
-# brain-calc
+### brain-calc
 
 Asks the result of an expression.
 
 https://asciinema.org/a/sHWyCLEjr2iIY6Mz3ZZ6TH6Bj
 
-# brain-gcd
+### brain-gcd
 
 Asks the greatest common divisor of given numbers.
 
 https://asciinema.org/a/eIK8hlLmu4Tp7COXq1apcPqy1
 
-# brain-progression
+### brain-progression
 
 Asks what number is missing in the progression.
 
 https://asciinema.org/a/U0IoywojHt9itXL2gJMp4IGfb
 
-# brain-prime
+### brain-prime
 
 Asks is a given number prime.
 
