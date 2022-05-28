@@ -1,5 +1,6 @@
 import {
   getRandomInt,
+  isEven,
   getMaxRounds,
   playGame,
 } from '../src/index.js';
@@ -11,8 +12,8 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 const getQuestionAndAnswer = () => {
   const maxNumber = 100;
   const question = getRandomInt(maxNumber);
-  const isEven = question % 2 === 0;
-  const answer = isEven ? 'yes' : 'no';
+  const isEvenQuestion = isEven(question);
+  const answer = isEvenQuestion ? 'yes' : 'no';
 
   return [question, answer];
 };

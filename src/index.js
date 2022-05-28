@@ -6,15 +6,18 @@ export default getAnswer;
 function getRandomInt(max) {
   return Math.floor(Math.random() * max) + 1;
 }
-export default getRandomInt;
+
+function isEven(num) {
+  return num % 2 === 0;
+}
 
 function getGcd(firstNumber, secondNumber) {
   let x = firstNumber;
   let y = secondNumber;
   while (y !== 0) y = x % (x = y);
+
   return x;
 }
-export default getGcd;
 
 function isPrime(num) {
   for (let i = 2; i < num; i += 1) {
@@ -22,9 +25,9 @@ function isPrime(num) {
       return false;
     }
   }
+
   return num > 1;
 }
-export default isPrime;
 
 const getMaxRounds = () => 3;
 
@@ -67,6 +70,7 @@ const playGame = (gameDescription, gameDataArray) => {
 
 export {
   getRandomInt,
+  isEven,
   getGcd,
   isPrime,
   getAnswer,
