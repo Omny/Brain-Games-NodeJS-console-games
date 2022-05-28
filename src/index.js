@@ -1,7 +1,30 @@
-import getAnswer from './get-answer.js';
-import getRandomInt from './get-random-int.js';
-import getGcd from './get-gcd.js';
-import isPrime from './is-prime.js';
+import readlineSync from 'readline-sync';
+
+const getAnswer = (questionToAsk) => readlineSync.question(questionToAsk);
+export default getAnswer;
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max) + 1;
+}
+export default getRandomInt;
+
+function getGcd(firstNumber, secondNumber) {
+  let x = firstNumber;
+  let y = secondNumber;
+  while (y !== 0) y = x % (x = y);
+  return x;
+}
+export default getGcd;
+
+function isPrime(num) {
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+export default isPrime;
 
 const getMaxRounds = () => 3;
 
