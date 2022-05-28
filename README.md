@@ -33,7 +33,7 @@ https://asciinema.org/a/eIK8hlLmu4Tp7COXq1apcPqy1
 
 ### brain-progression
 
-Asks what number is missing in the progression.
+Asks what number is missing in a progression.
 
 https://asciinema.org/a/U0IoywojHt9itXL2gJMp4IGfb
 
