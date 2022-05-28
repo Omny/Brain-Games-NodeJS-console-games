@@ -11,7 +11,8 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 const getQuestionAndAnswer = () => {
   const maxNumber = 100;
   const question = getRandomInt(maxNumber);
-  const answer = question % 2 === 0 ? 'yes' : 'no';
+  const isEven = question % 2 === 0;
+  const answer = isEven ? 'yes' : 'no';
 
   return [question, answer];
 };
