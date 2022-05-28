@@ -18,7 +18,7 @@ const getQuestionAndAnswer = () => {
       numbers[counter] = numbers[counter - 1] + commonDifference;
     }
   }
-  const answerPosition = getRandomInt(progressionLength);
+  const answerPosition = getRandomInt(progressionLength - 1);
   const answer = numbers[answerPosition];
   numbers[answerPosition] = '..';
   const question = numbers.join(' ');
