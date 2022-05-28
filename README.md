@@ -3,7 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 ![Node CI](https://github.com/Omny/frontend-project-lvl1/actions/workflows/github-actions.yml/badge.svg)
 
-# Brain Games - a NodeJS console games
+# Brain Games - NodeJS console games
 
 Brain Games - a set of five console games for practicing mental counting, which improves brain functionality. Each game asks questions that need to be answered correctly. After three correct answers, you win. Wrong answers end the game and you are asked to play it again.
 
