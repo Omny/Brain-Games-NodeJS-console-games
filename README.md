@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Omny/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Omny/frontend-project-lvl1/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-![Node CI](https://github.com/Omny/frontend-project-lvl1/actions/workflows/github-actions.yml/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/887dad380a66c11dd8b6/maintainability)](https://codeclimate.com/github/Omny/frontend-project-lvl1/maintainability)
+[![Node CI](https://github.com/Omny/frontend-project-lvl1/actions/workflows/github-actions.yml/badge.svg)](https://github.com/Omny/frontend-project-lvl1/actions)
 
 # Brain Games - NodeJS console games
 
