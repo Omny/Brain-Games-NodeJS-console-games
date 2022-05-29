@@ -1,6 +1,6 @@
 import {
   getRandomInt, isPrime, playGame,
-} from '../src/index.js';
+} from '../index.js';
 
 // How to play
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';

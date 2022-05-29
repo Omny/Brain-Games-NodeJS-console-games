@@ -2,7 +2,7 @@ import {
   getRandomInt,
   isEven,
   playGame,
-} from '../src/index.js';
+} from '../index.js';
 
 // How to play
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';

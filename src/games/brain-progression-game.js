@@ -1,4 +1,4 @@
-import { getRandomInt, playGame } from '../src/index.js';
+import { getRandomInt, playGame } from '../index.js';
 
 // How to play
 const gameDescription = 'What number is missing in the progression?';

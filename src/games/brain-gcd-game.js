@@ -1,6 +1,6 @@
 import {
   getRandomInt, getGcd, playGame,
-} from '../src/index.js';
+} from '../index.js';
 
 // How to play
 const gameDescription = 'Find the greatest common divisor of given numbers.';
