@@ -56,13 +56,10 @@ const playGame = (gameDescription, getQuestionAndAnswer) => {
     } else {
       console.log(`${usersAnswer} is wrong answer ;(. Correct answer was ${answer}.`);
       console.log(`Let's try again, ${userName}!`);
-      break;
+      return;
     }
   }
-
-  if (roundCounter === maxRounds) {
-    console.log(`Congratulations, ${userName}!`);
-  }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export {
