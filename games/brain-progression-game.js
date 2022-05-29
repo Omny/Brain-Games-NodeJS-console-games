@@ -28,13 +28,7 @@ const getQuestionAndAnswer = () => {
 
 // Start game
 const brainEvenGame = () => {
-  const gameDataArray = [];
-  const maxRounds = getMaxRounds();
-  for (let roundCounter = 0; roundCounter < maxRounds; roundCounter += 1) {
-    const questionAndAnswer = getQuestionAndAnswer();
-    gameDataArray.push(questionAndAnswer);
-  }
-  playGame(gameDescription, gameDataArray);
+  playGame(gameDescription, getQuestionAndAnswer);
 };
 
 export default brainEvenGame;

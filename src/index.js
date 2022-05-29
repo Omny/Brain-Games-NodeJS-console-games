@@ -29,8 +29,6 @@ function isPrime(num) {
   return num > 1;
 }
 
-const getMaxRounds = () => 3;
-
 const isAnswerRight = (usersAnswer, answer) => {
   const result = String(usersAnswer) === String(answer);
 
@@ -38,7 +36,7 @@ const isAnswerRight = (usersAnswer, answer) => {
 };
 
 // Play logic
-const playGame = (gameDescription, gameDataArray) => {
+const playGame = (gameDescription, getQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
   const userName = getAnswer('May I have your name? ');
   console.log(`Hello, ${userName}!`);
@@ -46,14 +44,13 @@ const playGame = (gameDescription, gameDataArray) => {
 
   // Play rounds and check is answer right
   let roundCounter = 0;
-  const maxRounds = gameDataArray.length;
+  const maxRounds = 3;
   while (roundCounter < maxRounds) {
-    const questionAndAnswer = gameDataArray[roundCounter];
-    const [question, answer] = questionAndAnswer;
+    const [question, answer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const usersAnswer = getAnswer('Your answer: ');
-    const result = isAnswerRight(usersAnswer, answer);
-    if (result) {
+    const answerCorrectness = isAnswerRight(usersAnswer, answer);
+    if (answerCorrectness) {
       roundCounter += 1;
       console.log('Correct!');
     } else {
@@ -74,6 +71,5 @@ export {
   getGcd,
   isPrime,
   getAnswer,
-  getMaxRounds,
   playGame,
 };
