@@ -1,39 +1,6 @@
-import readlineSync from 'readline-sync';
-
-const getAnswer = (questionToAsk) => readlineSync.question(questionToAsk);
-export default getAnswer;
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max) + 1;
-}
-
-function isEven(num) {
-  return num % 2 === 0;
-}
-
-function getGcd(firstNumber, secondNumber) {
-  let x = firstNumber;
-  let y = secondNumber;
-  while (y !== 0) y = x % (x = y);
-
-  return x;
-}
-
-function isPrime(num) {
-  for (let i = 2; i < num; i += 1) {
-    if (num % i === 0) {
-      return false;
-    }
-  }
-
-  return num > 1;
-}
-
-const isAnswerRight = (usersAnswer, answer) => {
-  const result = String(usersAnswer) === String(answer);
-
-  return result;
-};
+import {
+  getAnswer, getRandomInt, isEven, getGcd, isPrime,
+} from './helpers.js';
 
 // Play logic
 const playGame = (gameDescription, getQuestionAndAnswer) => {
@@ -49,7 +16,7 @@ const playGame = (gameDescription, getQuestionAndAnswer) => {
     const [question, answer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const usersAnswer = getAnswer('Your answer: ');
-    const answerCorrectness = isAnswerRight(usersAnswer, answer);
+    const answerCorrectness = String(usersAnswer) === String(answer);
     if (answerCorrectness) {
       roundCounter += 1;
       console.log('Correct!');
@@ -63,10 +30,5 @@ const playGame = (gameDescription, getQuestionAndAnswer) => {
 };
 
 export {
-  getRandomInt,
-  isEven,
-  getGcd,
-  isPrime,
-  getAnswer,
-  playGame,
+  getRandomInt, isEven, getGcd, isPrime, playGame,
 };
