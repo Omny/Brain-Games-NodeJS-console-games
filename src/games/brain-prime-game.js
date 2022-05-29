@@ -7,8 +7,8 @@ const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer
 
 // Game logic
 const getQuestionAndAnswer = () => {
-  const maxNumber = 100;
-  const question = getRandomInt(maxNumber);
+  const maxRandomNumber = 100;
+  const question = getRandomInt(maxRandomNumber);
   const isQuestionPrime = isPrime(question);
   const answer = isQuestionPrime ? 'yes' : 'no';
 

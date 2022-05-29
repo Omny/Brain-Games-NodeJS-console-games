@@ -9,8 +9,8 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 
 // Game logic
 const getQuestionAndAnswer = () => {
-  const maxNumber = 100;
-  const question = getRandomInt(maxNumber);
+  const maxRandomNumber = 100;
+  const question = getRandomInt(maxRandomNumber);
   const isQuestionEven = isEven(question);
   const answer = isQuestionEven ? 'yes' : 'no';
 
