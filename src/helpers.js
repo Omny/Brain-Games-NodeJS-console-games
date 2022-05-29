@@ -14,22 +14,13 @@ function isEven(num) {
 function getGcd(firstNumber, secondNumber) {
   let num1 = firstNumber;
   let num2 = secondNumber;
-  let gcd = 0;
-  do {
-    if (num1 === 0) {
-      gcd = num2;
-      break;
-    }
-    num2 %= num1;
 
-    if (num2 === 0) {
-      gcd = num1;
-      break;
-    }
-    num1 %= num2;
-  } while (num1 !== 0 || num2 !== 0);
-
-  return gcd;
+  while (num2 !== 0) {
+    const temp = num1 % num2;
+    num1 = num2;
+    num2 = temp;
+  }
+  return num1;
 }
 
 function isPrime(num) {
