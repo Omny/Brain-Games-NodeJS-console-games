@@ -1,4 +1,4 @@
-import { getRandomInt, getMaxRounds, playGame } from '../src/index.js';
+import { getRandomInt, playGame } from '../src/index.js';
 
 // How to play
 const gameDescription = 'What is the result of the expression?';

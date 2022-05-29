@@ -1,5 +1,5 @@
 import {
-  getRandomInt, isPrime, getMaxRounds, playGame,
+  getRandomInt, isPrime, playGame,
 } from '../src/index.js';
 
 // How to play

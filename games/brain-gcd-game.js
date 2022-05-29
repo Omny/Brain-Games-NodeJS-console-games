@@ -1,5 +1,5 @@
 import {
-  getRandomInt, getGcd, getMaxRounds, playGame,
+  getRandomInt, getGcd, playGame,
 } from '../src/index.js';
 
 // How to play
