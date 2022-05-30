@@ -30,5 +30,5 @@ const playGame = (gameDescription, getQuestionAndAnswer) => {
 };
 
 export {
-  getRandomInt, isEven, getGcd, isPrime, playGame,
+  getAnswer, getRandomInt, isEven, getGcd, isPrime, playGame,
 };
