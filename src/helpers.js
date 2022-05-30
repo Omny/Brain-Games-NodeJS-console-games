@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync';
 
 const getAnswer = (questionToAsk) => readlineSync.question(questionToAsk);
-export default getAnswer;
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max) + 1;
