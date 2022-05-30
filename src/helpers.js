@@ -15,11 +15,12 @@ function getGcd(firstNumber, secondNumber) {
   let num2 = secondNumber;
 
   while (num2 !== 0) {
-    const temp = num1 % num2;
+    const remainder = num1 % num2;
     num1 = num2;
-    num2 = temp;
+    num2 = remainder;
   }
-  return num1;
+  const gcd = num1;
+  return gcd;
 }
 
 function isPrime(num) {
