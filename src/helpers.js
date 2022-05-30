@@ -33,9 +33,9 @@ function isPrime(num) {
 }
 
 export {
+  getAnswer,
   getRandomInt,
   isEven,
   getGcd,
   isPrime,
-  getAnswer,
 };
