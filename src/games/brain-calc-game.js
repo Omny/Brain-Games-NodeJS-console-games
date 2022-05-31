@@ -4,25 +4,36 @@ import playGame from '../index.js';
 // How to play
 const gameDescription = 'What is the result of the expression?';
 
+const getExpressionResult = (firstNumber, secondNumber, arithmeticOperator) => {
+  let expressionResult;
+  switch (arithmeticOperator) {
+    case '+':
+      expressionResult = firstNumber + secondNumber;
+      break;
+    case '-':
+      expressionResult = firstNumber - secondNumber;
+      break;
+    case '*':
+      expressionResult = firstNumber * secondNumber;
+      break;
+    default:
+      console.log(`Unexpected Operator: ${arithmeticOperator}`);
+      expressionResult = NaN;
+  }
+
+  return expressionResult;
+};
+
 // Game logic
 const getQuestionAndAnswer = () => {
   const maxRandomNumber = 100;
   const firstNumber = getRandomInt(maxRandomNumber);
   const secondNumber = getRandomInt(maxRandomNumber);
-  const maxOperatorRandomNumber = 3;
-  const operatorNumber = getRandomInt(maxOperatorRandomNumber);
-  let arithmeticOperator = '';
-  let answer = 0;
-  if (operatorNumber === 1) {
-    arithmeticOperator = '+';
-    answer = firstNumber + secondNumber;
-  } else if (operatorNumber === 2) {
-    arithmeticOperator = '-';
-    answer = firstNumber - secondNumber;
-  } else {
-    arithmeticOperator = '*';
-    answer = firstNumber * secondNumber;
-  }
+  const operators = ['+', '-', '*'];
+  const maxOperatorRandomIndex = operators.length - 1;
+  const operatorIndex = getRandomInt(maxOperatorRandomIndex);
+  const arithmeticOperator = operators[operatorIndex];
+  const answer = getExpressionResult(firstNumber, secondNumber, arithmeticOperator);
   const question = `${firstNumber} ${arithmeticOperator} ${secondNumber}`;
 
   return [question, answer];
