@@ -17,7 +17,7 @@ const getExpressionResult = (firstNumber, secondNumber, arithmeticOperator) => {
       expressionResult = firstNumber * secondNumber;
       break;
     default:
-      throw new Error(`Unexpected operator: ${arithmeticOperator}`);
+      throw new Error(`Unexpected arithmetic operator: ${arithmeticOperator}`);
   }
 
   return expressionResult;
