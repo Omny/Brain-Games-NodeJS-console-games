@@ -11,13 +11,11 @@ function isEven(num) {
 }
 
 function getGcd(num1, num2) {
-  let gcd;
   if (num2 === 0) {
-    gcd = num1;
-  } else {
-    gcd = getGcd(num2, num1 % num2);
+    return num1;
   }
-  return gcd;
+
+  return getGcd(num2, num1 % num2);
 }
 
 function isPrime(num) {
