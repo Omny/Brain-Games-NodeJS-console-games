@@ -15,7 +15,7 @@ function getGcd(num1, num2) {
   if (num2 === 0) {
     gcd = num1;
   } else {
-    gcd = Math.gcd(num2, num1 % num2);
+    gcd = getGcd(num2, num1 % num2);
   }
   return gcd;
 }
