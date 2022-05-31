@@ -10,16 +10,13 @@ function isEven(num) {
   return num % 2 === 0;
 }
 
-function getGcd(firstNumber, secondNumber) {
-  let num1 = firstNumber;
-  let num2 = secondNumber;
-
-  while (num2 !== 0) {
-    const remainder = num1 % num2;
-    num1 = num2;
-    num2 = remainder;
+function getGcd(num1, num2) {
+  let gcd;
+  if (num2 === 0) {
+    gcd = num1;
+  } else {
+    gcd = Math.gcd(num2, num1 % num2);
   }
-  const gcd = num1;
   return gcd;
 }
 
