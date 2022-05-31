@@ -1,6 +1,4 @@
-import {
-  getAnswer, getRandomInt, isEven, getGcd, isPrime,
-} from './helpers.js';
+import { getAnswer } from './helpers.js';
 
 // Play logic
 const playGame = (gameDescription, getQuestionAndAnswer) => {
@@ -29,6 +27,4 @@ const playGame = (gameDescription, getQuestionAndAnswer) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export {
-  getAnswer, getRandomInt, isEven, getGcd, isPrime, playGame,
-};
+export default playGame;

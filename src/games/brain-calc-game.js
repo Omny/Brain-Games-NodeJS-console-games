@@ -1,4 +1,5 @@
-import { getRandomInt, playGame } from '../index.js';
+import { getRandomInt } from '../helpers.js';
+import playGame from '../index.js';
 
 // How to play
 const gameDescription = 'What is the result of the expression?';
