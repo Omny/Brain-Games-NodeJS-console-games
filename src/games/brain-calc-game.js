@@ -17,8 +17,7 @@ const getExpressionResult = (firstNumber, secondNumber, arithmeticOperator) => {
       expressionResult = firstNumber * secondNumber;
       break;
     default:
-      console.log(`Unexpected Operator: ${arithmeticOperator}`);
-      expressionResult = NaN;
+      throw new Error(`Unexpected operator: ${arithmeticOperator}`);
   }
 
   return expressionResult;
@@ -30,9 +29,8 @@ const getQuestionAndAnswer = () => {
   const firstNumber = getRandomInt(maxRandomNumber);
   const secondNumber = getRandomInt(maxRandomNumber);
   const operators = ['+', '-', '*'];
-  const maxOperatorRandomIndex = operators.length - 1;
-  const operatorIndex = getRandomInt(maxOperatorRandomIndex);
-  const arithmeticOperator = operators[operatorIndex];
+  const maxOperatorRandomIndex = operators.length;
+  const arithmeticOperator = operators[getRandomInt(maxOperatorRandomIndex) - 1];
   const answer = getExpressionResult(firstNumber, secondNumber, arithmeticOperator);
   const question = `${firstNumber} ${arithmeticOperator} ${secondNumber}`;
 
