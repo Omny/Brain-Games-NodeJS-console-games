@@ -5,22 +5,16 @@ import playGame from '../index.js';
 const gameDescription = 'What is the result of the expression?';
 
 const getExpressionResult = (firstNumber, secondNumber, arithmeticOperator) => {
-  let expressionResult;
   switch (arithmeticOperator) {
     case '+':
-      expressionResult = firstNumber + secondNumber;
-      break;
+      return firstNumber + secondNumber;
     case '-':
-      expressionResult = firstNumber - secondNumber;
-      break;
+      return firstNumber - secondNumber;
     case '*':
-      expressionResult = firstNumber * secondNumber;
-      break;
+      return firstNumber * secondNumber;
     default:
       throw new Error(`Unexpected arithmetic operator: ${arithmeticOperator}`);
   }
-
-  return expressionResult;
 };
 
 // Game logic
