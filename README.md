@@ -17,28 +17,28 @@ npm link
 
 Asks is a number even.
 
-https://asciinema.org/a/kvOMmQeumSDjAYZRGC3gbm35Z
+[![asciicast](https://asciinema.org/a/kvOMmQeumSDjAYZRGC3gbm35Z.svg)](https://asciinema.org/a/kvOMmQeumSDjAYZRGC3gbm35Z)
 
 ### brain-calc
 
 Asks the result of an expression.
 
-https://asciinema.org/a/sHWyCLEjr2iIY6Mz3ZZ6TH6Bj
+[![asciicast](https://asciinema.org/a/sHWyCLEjr2iIY6Mz3ZZ6TH6Bj.svg)](https://asciinema.org/a/sHWyCLEjr2iIY6Mz3ZZ6TH6Bj)
 
 ### brain-gcd
 
 Asks the greatest common divisor of given numbers.
 
-https://asciinema.org/a/eIK8hlLmu4Tp7COXq1apcPqy1
+[![asciicast](https://asciinema.org/a/eIK8hlLmu4Tp7COXq1apcPqy1.svg)](https://asciinema.org/a/eIK8hlLmu4Tp7COXq1apcPqy1)
 
 ### brain-progression
 
 Asks what number is missing in a progression.
 
-https://asciinema.org/a/U0IoywojHt9itXL2gJMp4IGfb
+[![asciicast](https://asciinema.org/a/U0IoywojHt9itXL2gJMp4IGfb.svg)](https://asciinema.org/a/U0IoywojHt9itXL2gJMp4IGfb)
 
 ### brain-prime
 
 Asks is a given number prime.
 
-https://asciinema.org/a/gKoUI7Afwbku5Ax4h8S5q1Gqz
+[![asciicast](https://asciinema.org/a/gKoUI7Afwbku5Ax4h8S5q1Gqz.svg)](https://asciinema.org/a/gKoUI7Afwbku5Ax4h8S5q1Gqz)
