@@ -11,8 +11,7 @@ const getQuestionAndAnswer = () => {
   const firstNumber = getRandomInt(maxRandomFirstNumber);
   const maxRandomCommonDifference = 5;
   const commonDifference = getRandomInt(maxRandomCommonDifference);
-  const numbers = [];
-  numbers[0] = firstNumber;
+  const numbers = [firstNumber];
   for (let counter = 1; counter < progressionLength; counter += 1) {
     numbers[counter] = numbers[counter - 1] + commonDifference;
   }
