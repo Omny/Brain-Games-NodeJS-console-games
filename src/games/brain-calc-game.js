@@ -21,8 +21,8 @@ const getQuestionAndAnswer = () => {
   const firstNumber = getRandomInt(maxRandomNumber);
   const secondNumber = getRandomInt(maxRandomNumber);
   const operators = ['+', '-', '*'];
-  const maxOperatorRandomIndex = operators.length;
-  const arithmeticOperator = operators[getRandomInt(maxOperatorRandomIndex) - 1];
+  const operatorRandomIndex = getRandomInt(operators.length) - 1;
+  const arithmeticOperator = operators[operatorRandomIndex];
   const answer = getExpressionResult(firstNumber, secondNumber, arithmeticOperator);
   const question = `${firstNumber} ${arithmeticOperator} ${secondNumber}`;
 
