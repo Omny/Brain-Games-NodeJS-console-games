@@ -1,10 +1,8 @@
 import { getRandomInt } from '../helpers.js';
 import playGame from '../index.js';
 
-// How to play
 const gameDescription = 'What number is missing in the progression?';
 
-// Game logic
 const getQuestionAndAnswer = () => {
   const progressionLength = 10;
   const maxRandomFirstNumber = 15;
@@ -23,7 +21,6 @@ const getQuestionAndAnswer = () => {
   return [question, answer];
 };
 
-// Start game
 const brainEvenGame = () => {
   playGame(gameDescription, getQuestionAndAnswer);
 };

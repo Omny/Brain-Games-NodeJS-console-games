@@ -1,10 +1,8 @@
 import { getRandomInt, isEven } from '../helpers.js';
 import playGame from '../index.js';
 
-// How to play
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-// Game logic
 const getQuestionAndAnswer = () => {
   const maxRandomNumber = 100;
   const question = getRandomInt(maxRandomNumber);
@@ -14,7 +12,6 @@ const getQuestionAndAnswer = () => {
   return [question, answer];
 };
 
-// Start game
 const brainEvenGame = () => {
   playGame(gameDescription, getQuestionAndAnswer);
 };

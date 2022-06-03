@@ -1,13 +1,11 @@
 import { getAnswer } from './helpers.js';
 
-// Play logic
 const playGame = (gameDescription, getQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
   const userName = getAnswer('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(gameDescription);
 
-  // Play rounds and check is answer right
   let roundCounter = 0;
   const maxRounds = 3;
   while (roundCounter < maxRounds) {

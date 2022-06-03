@@ -1,7 +1,6 @@
 import { getRandomInt } from '../helpers.js';
 import playGame from '../index.js';
 
-// How to play
 const gameDescription = 'What is the result of the expression?';
 
 const getExpressionResult = (firstNumber, secondNumber, arithmeticOperator) => {
@@ -17,7 +16,6 @@ const getExpressionResult = (firstNumber, secondNumber, arithmeticOperator) => {
   }
 };
 
-// Game logic
 const getQuestionAndAnswer = () => {
   const maxRandomNumber = 100;
   const firstNumber = getRandomInt(maxRandomNumber);
@@ -31,7 +29,6 @@ const getQuestionAndAnswer = () => {
   return [question, answer];
 };
 
-// Start game
 const brainCalcGame = () => {
   playGame(gameDescription, getQuestionAndAnswer);
 };
