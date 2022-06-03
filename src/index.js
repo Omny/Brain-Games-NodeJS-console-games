@@ -12,8 +12,8 @@ const playGame = (gameDescription, getQuestionAndAnswer) => {
     const [question, answer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const usersAnswer = getAnswer('Your answer: ');
-    const answerCorrectness = String(usersAnswer) === String(answer);
-    if (answerCorrectness) {
+    const isAnswerCorrect = String(usersAnswer) === String(answer);
+    if (isAnswerCorrect) {
       roundCounter += 1;
       console.log('Correct!');
     } else {
