@@ -16,7 +16,7 @@ This project improved my skills in writing understandable and structured code, i
 - continuous integration (CI) using Github Actions;
 - working with Git, Github;
 
-## How to install and play:
+## How to install and play
 
 make install
 
