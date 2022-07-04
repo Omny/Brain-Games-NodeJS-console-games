@@ -7,6 +7,15 @@
 
 Brain Games - a set of five console games for practicing mental counting, which improves brain functionality. Each game asks questions that need to be answered correctly. After three correct answers, you win. Wrong answers end the game and you are asked to play it again.
 
+### About Development
+
+This project improved my skills in writing understandable and structured code, introduced me to the best programming practices. It helped me better learn JavaScrypt, its environment:
+- setting up: node.js, npm, WSL, ESLint (Airbnb standard);
+- connecting and using third-party libraries;
+- maintaining coding standards with CodeClimate;
+- continuous integration (CI) using Github Actions;
+- working with Git, Github;
+
 ## How to install and play:
 
 make install
